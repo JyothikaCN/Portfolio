@@ -1,0 +1,42 @@
+/* src/components/Skills.css */
+
+.skills {
+    margin-top: 100px;
+  }
+  
+  .skills h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  #tools{
+    margin-left: 550px;
+  }
+  
+  .skills-grid {
+    margin-left: 150px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust as needed */
+    gap: 20px; /* Adjust gap between items */
+  }
+  
+  .skills-category {
+    text-align: center;
+  }
+  
+  .skill {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .skill i {
+    font-size: 48px;
+  }
+  
+  .skill span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
