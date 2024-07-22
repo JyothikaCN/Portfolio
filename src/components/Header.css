@@ -9,11 +9,10 @@
 }
 
 .nav-list {
-  margin-left: 200px;
   list-style: none;
   display: flex;
   font-size: larger;
-  gap: 50px;
+  gap: 30px; /* Adjusted gap for better spacing */
 }
 
 .nav-item button {
@@ -61,21 +60,38 @@
   .header {
     flex-direction: column;
     align-items: center;
+    padding: 15px; /* Reduced padding for smaller screens */
   }
 
   .nav-list {
-    margin-left: 0;
+    margin: 0; /* Remove margin for smaller screens */
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Reduced gap for a more compact layout */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .nav-item button {
+    font-size: 1rem; /* Smaller font size for better fit */
+    padding: 8px 12px; /* Adjust padding for smaller buttons */
   }
 }
 
 @media (max-width: 480px) {
+  .header {
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .nav-list {
+    gap: 5px; /* Further reduced gap */
+  }
+
   .nav-item button {
-    font-size: medium;
+    font-size: 0.9rem; /* Even smaller font size */
+    padding: 6px 10px; /* Smaller padding */
   }
 
   .theme-toggle {
     font-size: 1.2rem;
+    padding: 8px; /* Smaller padding */
   }
 }

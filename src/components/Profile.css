@@ -5,15 +5,18 @@
     padding: 40px;
     border-radius: 10px;
     color: var(--text-color);
+    flex-wrap: wrap; /* Allow wrapping for better mobile layout */
+    justify-content: center; /* Center-align content */
   }
   
   .profile-image-container {
     position: relative;
+    margin-bottom: 20px; /* Add space below image container */
   }
   
   .profile-picture {
     width: 300px;
-    margin-left: 150px;
+    margin: 0 auto; /* Center image horizontally */
     border-radius: 8px;
     position: relative;
     z-index: 1;
@@ -25,7 +28,6 @@
     right: -10px;
     left: 0px;
     top: 30px;
-    margin-left: 200px;
     width: 275px;
     height: 390px;
     border: 12px solid transparent;
@@ -36,9 +38,9 @@
   }
   
   .profile-text {
-    margin-left: 130px;
+    margin: 0 auto; /* Center text horizontally */
     max-width: 500px;
-    text-align: justify;
+    text-align: center; /* Center-align text for mobile */
   }
   
   .name {
@@ -79,7 +81,6 @@
   
     .profile-picture {
       width: 200px;
-      margin-left: 0;
     }
   
     .image-frame {
@@ -89,7 +90,7 @@
     }
   
     .profile-text {
-      margin-left: 0;
+      margin: 20px;
       max-width: 100%;
       text-align: center;
     }
