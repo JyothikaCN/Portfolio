@@ -1,7 +1,7 @@
+/* src/App.css */
 .App {
   text-align: center;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -12,13 +12,37 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1em; /* Add padding for better spacing on smaller screens */
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
 section {
   scroll-behavior: smooth;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 3vmin); /* Adjust font size for smaller screens */
+    padding: 0.5em; /* Adjust padding */
+  }
+
+  .App-link {
+    font-size: 1em; /* Adjust font size for links */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 4vmin); /* Further adjust font size for very small screens */
+    padding: 0.3em; /* Adjust padding */
+  }
+
+  .App-link {
+    font-size: 0.9em; /* Adjust font size for links */
+  }
+}

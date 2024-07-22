@@ -1,66 +1,78 @@
-/* Contact.css */
-
-
+/* src/components/Contact.css */
 
 .contact-box {
-    margin-top: 100px;
-    background-color:var(--contact-color); /* Semi-transparent background */
-    backdrop-filter: blur(50px); /* Blur effect */
-    border-radius: 50px 50px 0 0; /* Rounded top corners */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
-    text-align: center;
-    width: 97.5%;
-    color: var(--contact-text-color);
-    overflow: hidden;
-    padding: 20px;
+  margin-top: 100px;
+  background-color: var(--contact-color); /* Semi-transparent background */
+  backdrop-filter: blur(50px); /* Blur effect */
+  border-radius: 50px 50px 0 0; /* Rounded top corners */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  text-align: center;
+  width: 100%; /* Full width on smaller screens */
+  color: var(--contact-text-color);
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.contact-details {
+  text-align: center; /* Center text on smaller screens */
+  color: var(--contact-text-color); /* Dark color for text */
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center; /* Center icons on smaller screens */
+  flex-wrap: wrap; /* Wrap icons to new lines if needed */
+  gap: 15px; /* Adjust gap between icons */
+}
+
+.icon-container a {
+  font-size: 32px; /* Adjust icon size */
+  color: var(--contact-text-color); /* Icon color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.icon-container a:hover {
+  color: #3066BE; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-box {
+      margin-top: 50px; /* Adjust top margin for smaller screens */
+      padding: 15px; /* Reduce padding on smaller screens */
   }
-  
-  .contact-details p {
-    margin-bottom: 10px;
-    margin-left: 50px;
-  }
-  
-  .icon-container {
-    display: flex;
-    justify-content: space-around; /* Evenly space icons */
-  }
-  
-  .icon-container a {
-    font-size: 32px; /* Adjust icon size */
-    color: var(--contact-text-color); /* Icon color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-  }
-  
-  .icon-container a:hover {
-    color: #3066BE; /* Change color on hover */
-  }
-  
-  
+
   .contact-details {
-    text-align: left;
-    margin-left: 50px;
-    color: var(--contact-text-color); /* Dark color for text */
+      text-align: center; /* Center align text */
+      margin-left: 0; /* Remove left margin */
   }
-  
-  .contact-details p {
-    margin-bottom: 10px;
-    margin-left: 50px;
-  }
-  
+
   .icon-container {
-    display: flex;
-    justify-content: space-around; /* Evenly space icons */
+      gap: 10px; /* Adjust gap between icons */
   }
-  
+
   .icon-container a {
-    font-size: 32px; /* Adjust icon size */
-    color: var(--contact-text-color); /* Icon color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+      font-size: 28px; /* Slightly smaller icon size */
   }
-  
-  .icon-container a:hover {
-    color: #3066BE; /* Change color on hover */
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+      margin-top: 30px; /* Further adjust top margin */
+      padding: 10px; /* Further reduce padding */
   }
-  
+
+  .contact-details {
+      font-size: 14px; /* Smaller font size for better readability */
+  }
+
+  .icon-container a {
+      font-size: 24px; /* Further smaller icon size */
+  }
+}

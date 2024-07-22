@@ -1,5 +1,4 @@
 /* src/components/Header.css */
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -20,13 +19,14 @@
 .nav-item button {
   border: none;
   font-size: larger;
-  color: var(--text-color); /* Set text color based on --text-color variable */
-  background-color: transparent; /* Ensure button background is transparent */
-  text-decoration: none; /* Remove default text decoration */
+  color: var(--text-color);
+  background-color: transparent;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
 .nav-item button:hover {
-  color: var(--frame-color); /* Use the --frame-color variable for hover effect */
+  color: var(--frame-color);
 }
 
 @keyframes rotateAnimation {
@@ -45,6 +45,7 @@
   cursor: pointer;
   font-size: 1.5rem;
   transition: transform 0.5s ease-in-out;
+  padding: 10px;
 }
 
 .theme-toggle:hover {
@@ -53,4 +54,28 @@
 
 .theme-toggle.rotating {
   animation: rotateAnimation 0.5s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item button {
+    font-size: medium;
+  }
+
+  .theme-toggle {
+    font-size: 1.2rem;
+  }
 }

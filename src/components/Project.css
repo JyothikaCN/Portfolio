@@ -8,27 +8,31 @@
     border-radius: 8px;
     margin-top: 50px;
     background-color: transparent; /* Transparent background */
+    flex-direction: column; /* Stack items vertically on small screens */
 }
 
 .project-image-container {
     position: relative;
+    width: 100%; /* Full width for mobile */
+    display: flex;
+    justify-content: center;
 }
 
 .project-image {
-    width: 600px; /* Adjust width as needed */
-    height: 400px; /* Maintain aspect ratio */
+    width: 100%; /* Full width for mobile */
+    max-width: 600px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners for the image */
-    margin-right: 20px;
-    margin-left: 100px; /* Margin between image and text */
-    position: relative;
+    margin-right: 0; /* Remove right margin */
+    margin-left: 0; /* Remove left margin */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-text {
     flex: 1; /* Take up remaining space */
     text-align: justify; /* Justified text */
-    margin-left: 50px;
-    margin-right: 100px;
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
 }
 
 .project-title {
@@ -51,7 +55,7 @@
 
 .read-more-button {
     background-color: transparent;
-    color:var(--text-color);
+    color: var(--text-color);
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -80,4 +84,42 @@
 .project-link:hover {
     background-image: linear-gradient(to bottom right, #1a4c9c, #11998e); /* Darker gradient on hover */
     color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .project-image {
+        width: 100%; /* Full width for mobile */
+        max-width: 100%; /* Remove max-width constraint */
+    }
+
+    .project-text {
+        margin: 0; /* Remove margins for mobile */
+        text-align: center; /* Center align text */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .project-description {
+        font-size: 12px; /* Smaller font size for smaller screens */
+        max-height: 100px; /* Reduce max-height for smaller screens */
+    }
+
+    .read-more-button {
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .project-link {
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
 }

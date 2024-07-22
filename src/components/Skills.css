@@ -1,42 +1,95 @@
 /* src/components/Skills.css */
 
 .skills {
-    margin-top: 100px;
+  margin-top: 100px;
+}
+
+.skills h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center; /* Center align heading */
+}
+
+#tools {
+  margin-left: 0; /* Remove margin for better mobile alignment */
+  text-align: center; /* Center align tools section */
+}
+
+.skills-grid {
+  margin-left: 0; /* Remove left margin for better mobile alignment */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid layout */
+  gap: 20px; /* Adjust gap between items */
+  justify-content: center; /* Center grid items */
+}
+
+.skills-category {
+  text-align: center;
+}
+
+.skill {
+  text-align: center;
+  margin: 10px;
+}
+
+.skill i {
+  font-size: 48px; /* Adjust icon size if needed */
+}
+
+.skill span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skills {
+      margin-top: 50px; /* Adjust top margin for smaller screens */
   }
-  
+
   .skills h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: var(--text-color);
+      font-size: 20px; /* Smaller font size for heading */
   }
-  #tools{
-    margin-left: 550px;
+
+  #tools {
+      margin-left: 0; /* Remove margin for better alignment */
   }
-  
+
   .skills-grid {
-    margin-left: 150px;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust as needed */
-    gap: 20px; /* Adjust gap between items */
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column size for smaller screens */
+      gap: 15px; /* Reduce gap between items */
   }
-  
-  .skills-category {
-    text-align: center;
-  }
-  
-  .skill {
-    text-align: center;
-    margin: 10px;
-  }
-  
+
   .skill i {
-    font-size: 48px;
+      font-size: 36px; /* Smaller icon size for smaller screens */
   }
-  
+
   .skill span {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
+      font-size: 12px; /* Smaller font size for text */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .skills {
+      margin-top: 30px; /* Further adjust top margin */
+  }
+
+  .skills h2 {
+      font-size: 18px; /* Even smaller font size for heading */
+  }
+
+  .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Further adjust column size */
+      gap: 10px; /* Further reduce gap between items */
+  }
+
+  .skill i {
+      font-size: 30px; /* Further smaller icon size */
+  }
+
+  .skill span {
+      font-size: 10px; /* Further smaller font size for text */
+  }
+}
